@@ -3,6 +3,7 @@ import { defineConfig, loadEnv } from 'vite';
 
 
 export default defineConfig(({ mode }) => {
+    base: '/Portfolio-Website/',
     const env = loadEnv(mode, '.', '');
     return {
       server: {
