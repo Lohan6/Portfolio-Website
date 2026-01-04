@@ -395,9 +395,9 @@ const SectionHeading = ({ children, icon: Icon }: { children?: React.ReactNode, 
     initial={{ opacity: 0, x: -20 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true, margin: "-100px" }}
-    className="text-3xl font-bold mb-12 text-text flex items-center gap-3"
+    className="text-2xl md:text-3xl font-bold mb-10 text-text flex items-center gap-3"
   >
-    {Icon && <Icon className="text-primary" size={32} />}
+    {Icon && <Icon className="text-primary" size={28} />}
     <span className="relative">
       {children}
       <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-primary to-transparent rounded-full" />
@@ -452,11 +452,11 @@ const Hero = () => {
             </span>
             AVAILABLE FOR DATA ROLES
           </motion.div>
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight text-text drop-shadow-sm">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] mb-6 tracking-tight text-text drop-shadow-sm">
             Making Sense of <br />
             <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Complex Data.</span>
           </h1>
-          <p className="text-secondary text-lg mb-8 max-w-lg leading-relaxed font-light drop-shadow-md">
+          <p className="text-secondary text-base sm:text-lg mb-8 max-w-lg leading-relaxed font-light drop-shadow-md">
             I am a <strong>Data Scientist</strong> with a background in Computer Engineering. I specialize in turning raw data into predictive insights, while keeping a foundational understanding of the full hardware-software stack.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -464,7 +464,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#projects"
-              className="bg-primary text-background font-semibold px-8 py-3 rounded-lg flex items-center gap-2 shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all"
+              className="bg-primary text-background font-semibold px-8 py-3 rounded-lg flex items-center gap-2 shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all text-sm md:text-base"
             >
               View Data Projects <BarChart3 size={18} />
             </motion.a>
@@ -472,7 +472,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#about"
-              className="border border-white/10 hover:bg-white/5 text-text px-8 py-3 rounded-lg transition-colors bg-background/50 backdrop-blur-sm"
+              className="border border-white/10 hover:bg-white/5 text-text px-8 py-3 rounded-lg transition-colors bg-background/50 backdrop-blur-sm text-sm md:text-base"
             >
               About Me
             </motion.a>
@@ -507,7 +507,7 @@ const About = () => {
             viewport={{ once: true }}
           >
             <SectionHeading icon={CircuitBoard}>Expertise</SectionHeading>
-            <div className="space-y-6 text-secondary text-lg leading-relaxed font-light">
+            <div className="space-y-6 text-secondary text-base md:text-lg leading-relaxed font-light">
               <p>
                 My academic journey in <strong className="text-primary font-normal">Computer Engineering</strong> has given me a rare perspective in the world of Data Science. Unlike many who strictly focus on high-level algorithms, I have seen what happens "under the hood."
               </p>
@@ -537,17 +537,17 @@ const About = () => {
           >
             <div className="absolute inset-0 bg-primary/5 rounded-2xl transform rotate-3" />
             <div className="relative bg-background p-8 rounded-2xl border border-white/5 shadow-2xl">
-               <h3 className="font-sans text-xl font-medium mb-6 text-text">Focus Areas</h3>
+               <h3 className="font-sans text-lg md:text-xl font-medium mb-6 text-text">Focus Areas</h3>
                <div className="space-y-6">
                   <motion.div 
                     whileHover={{ x: 5 }}
                     className="group"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-primary font-medium">Data Science & ML</span>
+                      <span className="text-primary font-medium text-base">Data Science & ML</span>
                       <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">PRIMARY</span>
                     </div>
-                    <p className="text-sm text-secondary">Predictive modeling, EDA, statistical analysis, and visualization.</p>
+                    <p className="text-sm text-secondary leading-relaxed">Predictive modeling, EDA, statistical analysis, and visualization.</p>
                   </motion.div>
                   
                   <div className="w-full h-px bg-white/5" />
@@ -557,10 +557,10 @@ const About = () => {
                     className="group opacity-80 hover:opacity-100 transition-opacity"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-text font-medium">Computer Engineering</span>
+                      <span className="text-text font-medium text-base">Computer Engineering</span>
                       <span className="text-xs font-mono text-muted bg-white/5 px-2 py-1 rounded">DEGREE</span>
                     </div>
-                    <p className="text-sm text-secondary">Hardware architecture, embedded systems, and low-level logic.</p>
+                    <p className="text-sm text-secondary leading-relaxed">Hardware architecture, embedded systems, and low-level logic.</p>
                   </motion.div>
 
                   <div className="w-full h-px bg-white/5" />
@@ -570,10 +570,10 @@ const About = () => {
                     className="group opacity-80 hover:opacity-100 transition-opacity"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-text font-medium">Full Stack & Mobile</span>
+                      <span className="text-text font-medium text-base">Full Stack & Mobile</span>
                       <span className="text-xs font-mono text-muted bg-white/5 px-2 py-1 rounded">BASIC</span>
                     </div>
-                    <p className="text-sm text-secondary">Flutter, React Native, SQL/NoSQL databases, and API integration.</p>
+                    <p className="text-sm text-secondary leading-relaxed">Flutter, React Native, SQL/NoSQL databases, and API integration.</p>
                   </motion.div>
                </div>
             </div>
@@ -612,7 +612,7 @@ const Skills = () => {
                    <div className="text-primary bg-primary/10 p-2 rounded-md transition-all duration-300 group-hover-wiggle">
                      {skill.icon}
                    </div>
-                   <span className="text-text font-medium transition-colors duration-300 group-hover:text-primary">{skill.name}</span>
+                   <span className="text-text font-medium transition-colors duration-300 group-hover:text-primary text-sm md:text-base">{skill.name}</span>
                  </motion.div>
                ))}
              </motion.div>
@@ -686,7 +686,7 @@ const Experience = () => {
             </motion.div>
 
             <div className="mb-2 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-               <h3 className="text-2xl font-bold text-text">Network & Automation Engineering Intern</h3>
+               <h3 className="text-xl md:text-2xl font-bold text-text">Network & Automation Engineering Intern</h3>
                <span className="text-primary font-mono text-sm bg-primary/10 px-3 py-1 rounded-full w-fit">SIWES</span>
             </div>
             
@@ -697,30 +697,30 @@ const Experience = () => {
 
             <motion.div 
               whileHover={{ y: -5 }}
-              className="group bg-background/40 backdrop-blur-sm border border-white/5 rounded-xl p-8 hover:border-primary/30 transition-colors shadow-xl relative overflow-hidden"
+              className="group bg-background/40 backdrop-blur-sm border border-white/5 rounded-xl p-6 md:p-8 hover:border-primary/30 transition-colors shadow-xl relative overflow-hidden"
             >
                {/* Hover Glow Effect */}
                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-               <p className="text-secondary leading-relaxed mb-8 relative z-10">
+               <p className="text-secondary text-sm md:text-base leading-relaxed mb-8 relative z-10">
                  Gained intensive hands-on experience in enterprise networking and smart home automation. Bridged the gap between academic theory and practical implementation by deploying complex network infrastructures and integrated control systems for high-profile clients.
                </p>
 
                <div className="grid md:grid-cols-2 gap-8 relative z-10">
                   <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{once: true}}>
-                     <h4 className="flex items-center gap-2 text-text font-medium mb-4">
+                     <h4 className="flex items-center gap-2 text-text font-medium mb-4 text-base md:text-lg">
                        <Router size={18} className="text-primary"/> Network Infrastructure
                      </h4>
                      <ul className="space-y-3">
-                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm text-secondary">
+                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm md:text-base text-secondary leading-relaxed">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0"></span>
                           <span>Built server racks from scratch, including device arrangement, <strong>structured cabling</strong>, and effective cable management (Cat6/Fiber).</span>
                         </motion.li>
-                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm text-secondary">
+                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm md:text-base text-secondary leading-relaxed">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0"></span>
                           <span>Configured enterprise-grade <strong>Araknis routers</strong> and managed switches via the <strong>OvrC cloud platform</strong>.</span>
                         </motion.li>
-                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm text-secondary">
+                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm md:text-base text-secondary leading-relaxed">
                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0"></span>
                            <span>Implemented VLANs, static IPs, and Mesh Wi-Fi systems (Eero) to resolve connectivity bottlenecks in large facilities.</span>
                         </motion.li>
@@ -728,19 +728,19 @@ const Experience = () => {
                   </motion.div>
 
                   <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{once: true}}>
-                     <h4 className="flex items-center gap-2 text-text font-medium mb-4">
+                     <h4 className="flex items-center gap-2 text-text font-medium mb-4 text-base md:text-lg">
                        <MonitorSpeaker size={18} className="text-accent"/> Smart Automation & AV
                      </h4>
                      <ul className="space-y-3">
-                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm text-secondary">
+                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm md:text-base text-secondary leading-relaxed">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/50 shrink-0"></span>
                           <span>Programmed <strong>Control4</strong> ecosystems using <em>Composer Pro</em>, integrating automated blinds, Lutron lighting modules, and voice control (Alexa).</span>
                         </motion.li>
-                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm text-secondary">
+                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm md:text-base text-secondary leading-relaxed">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/50 shrink-0"></span>
                           <span>Installed and calibrated high-fidelity AV systems (Bluesound), video walls (WyreStorm), and corporate conferencing hardware (Yealink/Crestron).</span>
                         </motion.li>
-                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm text-secondary">
+                        <motion.li variants={itemVariants} className="flex items-start gap-2 text-sm md:text-base text-secondary leading-relaxed">
                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/50 shrink-0"></span>
                            <span>Deployed <strong>Ajax smart security</strong> systems including hubs, sirens, and motion detectors.</span>
                         </motion.li>
@@ -794,11 +794,11 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
             }`}>
               {project.category === "data" ? "DATA SCIENCE" : "ENGINEERING"}
             </span>
-            <h2 className="text-3xl font-bold text-text mb-2">{project.title}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-text mb-2">{project.title}</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="md:col-span-2 text-secondary leading-relaxed space-y-4">
+            <div className="md:col-span-2 text-secondary text-base leading-relaxed space-y-4">
               <p>{project.fullDescription}</p>
             </div>
             <div className="bg-surface/50 p-6 rounded-lg border border-white/5 h-fit">
@@ -817,7 +817,7 @@ const ProjectModal = ({ project, onClose }: { project: Project; onClose: () => v
             <h3 className="text-lg font-medium text-text mb-4">Key Highlights</h3>
             <ul className="grid sm:grid-cols-2 gap-3">
               {project.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3 text-secondary text-sm">
+                <li key={i} className="flex items-start gap-3 text-secondary text-sm md:text-base leading-relaxed">
                   <span className="mt-1 text-primary"><ArrowRight size={14} /></span> {feature}
                 </li>
               ))}
@@ -885,7 +885,7 @@ const Projects = () => {
                    <ExternalLink size={18} className="text-muted group-hover:text-primary transition-colors" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-text mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-text mb-3 group-hover:text-primary transition-colors leading-tight">
                   {project.title}
                 </h3>
                 <p className="text-secondary text-sm leading-relaxed mb-6">
@@ -925,10 +925,10 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           <p className="text-primary font-mono text-sm mb-4">What's Next?</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-text mb-6">
             Get In Touch
           </h2>
-          <p className="text-secondary text-lg mb-10 max-w-xl mx-auto">
+          <p className="text-secondary text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
             I'm currently looking for new opportunities in Data Science. Whether you have a question about my research or just want to say hi, my inbox is open.
           </p>
           
